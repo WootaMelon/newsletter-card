@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: robobold;
+  src: url(assets/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: robo;
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+:root {
+  --color-tomato: hsl(4, 100%, 67%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-charcoal-grey: hsl(235, 18%, 26%);
+  --color-slate-grey: hsl(234, 29%, 20%);
+  --color-grey: hsl(231, 7%, 60%);
+}
+
+body {
+  background-color: var(--color-slate-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: robo;
+}
+
+p {
+  color: var(--color-charcoal-grey);
+  font-size: 16px;
+}
+
+.signup-form {
+  background-color: var(--color-white);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 25px;
+  text-align: start;
+}
+
+.signup-form-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 5rem;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.signup-form-left h1 {
+  color: var(--color-slate-grey);
+  font-family: robobold;
+  font-weight: bold;
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.checklist li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.25rem;
+}
+
+.checklist img {
+  width: 15px;
+}
+
+label {
+  color: var(--color-slate-grey);
+  padding-bottom: 0.25rem;
+  font-family: robobold;
+  font-weight: bold;
+}
+
+input {
+  border: none;
+  border: 1px solid;
+  border-color: var(--color-grey);
+  border-radius: 5px;
+  padding: 1rem;
+  padding-right: 10rem;
+}
+input:focus {
+  border-color: var(--color-slate-grey);
+  outline: var(--color-slate-grey);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--color-white);
+  background: var(--color-slate-grey);
+  padding: 1rem 5rem;
+  margin-top: 0.75rem;
+}
+
+button:hover {
+  background: var(--color-tomato);
+  box-shadow: 0 4px 8px 0 var(--color-tomato);
+}
+
+.success-message {
+  background-color: var(--color-white);
+  font-family: robo;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 25px;
+  text-align: start;
+  display: none;
+}
+.success-message h1 {
+  color: var(--color-slate-grey);
+  font-family: robobold;
+  font-weight: bold;
+  padding-top: 1.5rem;
+  font-size: 3rem;
+}
+#email-span {
+  font-family: robobold;
+  font-weight: bold;
+}
+.success-message img {
+  width: 50px;
+}
+
+.error-state {
+  border-color: red;
+  background-color: var(--color-tomato);
+}
+
+.labels {
+  display: flex;
+  gap: 6rem;
+}
+#invalid-email-text {
+  color: var(--color-tomato);
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    display: block;
+    background-color: var(--color-white);
+  }
+  p {
+    font-size: 12px;
+  }
+
+  .signup-form {
+    background-color: var(--color-white);
+    padding: 0;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 0;
+  }
+  .signup-form-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+    order: 2;
+  }
+  .signup-form-left h1 {
+    color: var(--color-slate-grey);
+    font-family: robobold;
+    font-weight: bold;
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+    padding-top: 0;
+  }
+  .signup-form-right {
+    order: 1;
+  }
+  .signup-form-right img {
+    width: 100%;
+    height: auto;
+  }
+
+  .checklist li {
+    align-items: center;
+    gap: 1rem;
+    padding: 0.25rem;
+    font-size: 12px;
+  }
+
+  .checklist img {
+    width: 15px;
+  }
+
+  label {
+    padding-bottom: 0.5rem;
+  }
+
+  input {
+    padding: 1.25rem;
+    padding-right: 10rem;
+  }
+
+  button {
+    margin-top: 1.75rem;
+  }
+
+  .success-message {
+    background-color: var(--color-white);
+    font-family: robo;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 25px;
+    text-align: start;
+    display: none;
+  }
+  .success-message h1 {
+    font-size: 2.5rem;
+  }
+  .success-message p {
+    font-size: 16px;
+  }
+  .success-message button {
+    margin-top: 60%;
+  }
+  .success-message img {
+    width: 80px;
+  }
+}
