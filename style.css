@@ -155,7 +155,7 @@ button:hover {
   display: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   body {
     display: block;
     background-color: var(--color-white);
